@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:background="@color/indigo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+
+      android:layout_marginTop="30dp"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/tv_step_count"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_step_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_semibold"
+        android:maxLength="10"
+        android:text="Ходов: 0"
+        android:textAllCaps="false"
+        android:textColor="@color/neon"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintBottom_toTopOf="@+id/tags_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+       />
+
+    <GridLayout
+        android:id="@+id/tags_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/background_grid"
+        android:columnCount="4"
+        android:layout_gravity="center"
+        android:foregroundGravity="center"
+        android:padding="5dp"
+        android:rowCount="4"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H,1"
+        android:elevation="8dp"
+        android:outlineAmbientShadowColor="@color/neon"
+        android:outlineSpotShadowColor="@color/neon"
+
+       />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_reset_game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+
+        android:background="@drawable/background_button"
+        android:elevation="8dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="СБРОС"
+        android:textColor="@color/neon"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tags_layout" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
